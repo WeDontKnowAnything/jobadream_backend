@@ -42,7 +42,7 @@ dependencies {
 //    Data Base
 //    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
     runtimeOnly 'org.postgresql:postgresql'
-//    AWS S3 연동을 위한 의존성 버전 확인이 필요
+//    AWS S3 연동을 위한 의존성 버전 확인이 필요함
 //    implementation group: 'io.awspring.cloud', name: 'spring-cloud-starter-aws', version: '2.4.4'
 
 //    Test
