@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jobadreamdb@jobadream-dev-postgres-standalone.cxc8woko0sf5.ap-northeast-2.rds.amazonaws.com" uuid="b45b69e4-4259-4b48-9458-0f64be2f6c3c">
-      <driver-ref>postgresql</driver-ref>
+    <data-source source="LOCAL" name="jobadreamrds@jobadream-postgres-standalone.cxc8woko0sf5.ap-northeast-2.rds.amazonaws.com" uuid="b45b69e4-4259-4b48-9458-0f64be2f6c3c">
+      <driver-ref>postgresql.aws_wrapper</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://jobadream-dev-postgres-standalone.cxc8woko0sf5.ap-northeast-2.rds.amazonaws.com:5432/jobadreamdb</jdbc-url>
+      <schema-control>MANUAL</schema-control>
+      <jdbc-driver>software.amazon.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:aws-wrapper:postgresql://jobadream-postgres-standalone.cxc8woko0sf5.ap-northeast-2.rds.amazonaws.com:5432/jobadreamrds</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
