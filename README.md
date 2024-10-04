@@ -8,7 +8,6 @@
 
 3.성능 최적화 : Java 기반의 빠른 처리 성능을 제공
 
-# architecture
 
 ![아키텍처_v1](https://github.com/user-attachments/assets/ad8dfc23-a6f4-472f-9ac4-927fe8e569ca)
 
