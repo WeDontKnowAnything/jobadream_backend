@@ -2,6 +2,8 @@ package com.toyproject.jobadream.corp.controller;
 
 import com.toyproject.jobadream.corp.dto.CorpDto;
 import com.toyproject.jobadream.corp.service.CorpService;
+import com.toyproject.jobadream.corp.service.SpecificService;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,9 +13,11 @@ import java.util.List;
 public class CorpController {
 
 	private final CorpService corpService;
+	private final SpecificService specificService;
 
-	public CorpController(CorpService corpService) {
+	public CorpController(CorpService corpService, SpecificService specificService) {
 		this.corpService = corpService;
+		this.specificService = specificService;
 	}
 
 	// 전체 회사 조회
@@ -23,8 +27,8 @@ public class CorpController {
 	}
 
 	// 특정 회사 조회
-	@GetMapping("/Specific")
-	public CorpDto readCorporation(@RequestParam("Id") String corpId) {
-		return corpService.getSpecificCorp(corpId);
+	@GetMapping("/specific")
+	public CorpDto readCorporation(@RequestParam("id") String id) {
+		return specificService.getSpecificCorp(id);
 	}
 }

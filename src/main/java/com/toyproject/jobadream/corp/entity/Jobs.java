@@ -1,15 +1,17 @@
 package com.toyproject.jobadream.corp.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+@Entity
 @Table(name = "jobs")
 @Data
 public class Jobs {
 	@Id
-	private int id;
+	private String id;
 	@Column(name = "corp_name")
 	private String corpName;
 	private String title;
@@ -21,4 +23,6 @@ public class Jobs {
 	private int openingDate;
 	@Column(name = "closing_date")
 	private int closingDate;
+	@Column(name = "corp_id")
+	private String corpId;
 }
