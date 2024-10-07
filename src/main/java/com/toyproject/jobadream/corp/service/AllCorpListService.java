@@ -9,13 +9,12 @@ import com.toyproject.jobadream.corp.dto.CorpDto;
 import com.toyproject.jobadream.corp.entity.Corp;
 import com.toyproject.jobadream.corp.repository.CorpRepository;
 
-
 @Service
-public class CorpService {
+public class AllCorpListService {
 
 	private final CorpRepository corpRepository;
 
-	public CorpService(CorpRepository corpRepository) {
+	public AllCorpListService(CorpRepository corpRepository) {
 		this.corpRepository = corpRepository;
 	}
 

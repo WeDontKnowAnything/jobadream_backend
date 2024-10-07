@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class JobUrl {
 	@Id
-	private String id;
+	private int id;
 	@Column(name = "platform_name")
 	private String platformName;
 	private String url;
