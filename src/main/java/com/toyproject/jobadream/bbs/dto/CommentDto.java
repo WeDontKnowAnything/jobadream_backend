@@ -9,5 +9,5 @@ public class CommentDto {
 	private Integer id;
 	private String comment;
 	private LocalDateTime commentDate;
-	private Long postId;
+	private Integer postId;
 }
