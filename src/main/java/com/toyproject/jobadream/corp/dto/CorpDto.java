@@ -1,15 +1,14 @@
 package com.toyproject.jobadream.corp.dto;
 
-import jakarta.persistence.OneToMany;
-import lombok.Data;
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class CorpDto {
 	private String id;
 	private String name;
-	@OneToMany(mappedBy = "CorpDto")
-	private List<JobDto> jobs;  // JobDto는 별도로 정의
-
+	private List<JobsDto> jobs;
+	//연관된 Job 데이터를 포함할 수 있습니다
 }
+
 
