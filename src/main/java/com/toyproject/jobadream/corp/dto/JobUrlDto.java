@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class JobUrlDto {
-	public String platformName;
-	public String url;
 
+	private String platformName;
+	private String url;
 }

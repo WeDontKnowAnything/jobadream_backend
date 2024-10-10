@@ -10,11 +10,11 @@ import com.toyproject.jobadream.corp.entity.Corp;
 import com.toyproject.jobadream.corp.repository.CorpRepository;
 
 @Service
-public class CorpService {
+public class AllCorpListService {
 
 	private final CorpRepository corpRepository;
 
-	public CorpService(CorpRepository corpRepository) {
+	public AllCorpListService(CorpRepository corpRepository) {
 		this.corpRepository = corpRepository;
 	}
 
@@ -29,19 +29,5 @@ public class CorpService {
 				return corpDto;
 			})
 			.collect(Collectors.toList());
-	}
-
-	// 특정 기업 조회 (기업 ID로 조회)
-	public CorpDto getSpecificCorp(String corpId) {
-		Corp corp = corpRepository.findById(Integer.valueOf(corpId))
-			.orElseThrow(() -> new RuntimeException("Corporation not found with id: " + corpId));
-
-		// Corp 엔티티를 CorpDto로 변환
-		CorpDto corpDto = new CorpDto();
-		corpDto.setId(corp.getId());
-		corpDto.setName(corp.getName());
-		corpDto.setJobs(corpDto.getJobs());
-
-		return corpDto;
 	}
 }
